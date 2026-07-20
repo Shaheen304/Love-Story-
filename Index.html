@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسالة خاصة جداً ❤️</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.35); 
+            border-radius: 20px;
+            padding: 30px 20px;
+            max-width: 500px;
+            width: 100%;
+            z-index: 10;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            max-height: 85vh;
+            overflow-y: auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d90429;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            color: #222;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: right;
+            white-space: pre-line;
+            font-weight: 500;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .btn {
+            background-color: #ff4b2b;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 75, 43, 0.3);
+            text-decoration: none;
+            display: inline-block;
+            width: 85%;
+        }
+
+        .btn-video {
+            background-color: #e63946;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        /* قلوب متطايرة */
+        .heart {
+            position: fixed;
+            color: #ff4b2b;
+            font-size: 22px;
+            user-select: none;
+            pointer-events: none;
+            animation: moveUp 4s linear infinite;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        @keyframes moveUp {
+            0% {
+                transform: translateY(100vh) scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>اسم حبيبتك💗<h1
+
+        <!-- مشغل الصوت -->
+        <audio id="myAudio" controls autoplay loop>
+            <source src="song.mp3" type="audio/mp3">
+            المتصفح لا يدعم تشغيل الصوت.
+        </audio>
+
+        <div class="message">
+            انا بحبك اوي وبعشقك بشكل مش طبيعي 😍🔥
+            يمكن مش بعرف اعبر دايمًا
+            بس كل اللي جوايا ليكي اكبر بكتير من اي كلام 🤍✨
+            انتي بقيتي كل حياتي وكل تفكيري من اول ما بصحى.
+
+            بفكر فيكي في كل حاجه
+            وبفرح لمجرد وجودك جنبي حتى لو بالكلام 🥺💬
+
+            بحس معاكي براحه
+            وبكون نفسي اكون السبب في فرحتك دايمًا 🥺❤️
+
+            نفسي افضل جنبك طول العمر
+            واسنك وتكوني سندي 💕
+
+            ونعيش سوا اي حاجه حلوه
+            او حتى صعبه بس طول ما احنا مع بعض كله بيهون ✨💍
+
+            انا مش شايف غيرك ولا عايز غيرك 🙈❤️
+            بحس اني اقرب حد ليا وكأنك مني.. وبتاعتي.
+            ونفسي في يوم ربنا يجمعنا بالحلال ونبقى لبعض بجد 💍🥳
+
+            ونبني بيت صغير كده مليان حب وضحك وراحه 🏡
+            ونخلف اولاد شبهك حلوين وطيبين 👶🥳 ويكونوا نسخه منك، حاجة حلوة 😍
+
+            انتي بالنسبة لي مش بس حب ❤️
+            انتي راحه وامان وحلم نفسي اعيشه طول عمري 🌙✨
+
+            انا من غيرك ولا حاجه وانتي كل حاجه بالنسبة لي 🥺💖
+            وربنا يخليكي ليا ويديمك في حياتي يا اجمل حاجه حصلتلي 🌸✨
+        </div>
+
+        <div class="btn-container">
+            <button class="btn" onclick="createHearts()">طيري قلوب ✨❤️</button>
+            
+            <!-- الزرار بالنص الجديد -->
+            <a href="video.html" class="btn btn-video">اضغطي هنا يا قلبي ✨❤️</a>
+        </div>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        function createHearts() {
+            const audio = document.getElementById('myAudio');
+            if (audio) {
+                audio.play();
+            }
+
+            for (let i = 0; i < 20; i++) {
+                setTimeout(createHeart, i * 80);
+            }
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+
+</body>
+</html>
